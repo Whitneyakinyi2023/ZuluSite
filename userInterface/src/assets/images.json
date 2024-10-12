@@ -1,0 +1,59 @@
+{
+    "images": [
+        {
+            "id": 1,
+            "name": "4th Street Red",
+            "src": "./4thstreet_red.PNG"
+        },
+        {
+            "id": 2,
+            "name": "Amarula Cream",
+            "src": "./Amarula_cream.PNG"
+        },
+        {
+            "id": 3,
+            "name": "Baileys Cream",
+            "src": "./baileys_cream.PNG"
+        },
+        {
+            "id": 4,
+            "name": "Four Cousins Wine",
+            "src": "four_cousins_wine.PNG"
+        },
+        {
+            "id": 5,
+            "name": "Jack Daniel's Tennessee Whiskey",
+            "src": "Jack_Daniels_Tennessee_whiskey.PNG"
+        },
+        {
+            "id": 6,
+            "name": "Jameson Whiskey",
+            "src": "Jameson_whisky.PNG"
+        },
+        {
+            "id": 7,
+            "name": "Kenyan Originals Pineapple Mint",
+            "src": "Kenyan_Originals_PineappleMint.PNG"
+        },
+        {
+            "id": 8,
+            "name": "Kenya Cane Spirit",
+            "src": "kenyacane_Spirit.PNG"
+        },
+        {
+            "id": 9,
+            "name": "Logo Name",
+            "src": "Logo_name.PNG"
+        },
+        {
+            "id": 10,
+            "name": "Logo",
+            "src": "logo_only.PNG"
+        },
+        {
+            "id": 11,
+            "name": "Moet Champagne",
+            "src": "moet_champagne.PNG"
+        }
+    ]
+}

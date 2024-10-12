@@ -1,0 +1,27 @@
+/* navbar.css */
+
+.navbar {
+    display: flex;
+    /* Use flexbox for layout */
+    justify-content: flex-end;
+    /* Align contents to the right */
+    align-items: center;
+    /* Center contents vertically */
+    padding: 10px 20px;
+    /* Add some padding (with more space on the sides) */
+    background-color: #f8f9fa;
+    /* Light background color */
+    height: 60px;
+    /* Set the height of the navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.navbar-logo {
+    max-width: 100px;
+    /* Limit the max width of the logo */
+    height: 95%;
+    /* Maintain aspect ratio */
+    margin-right: auto;
+    /* Push the logo to the right */
+}
