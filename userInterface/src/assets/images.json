@@ -54,6 +54,21 @@
             "id": 11,
             "name": "Moet Champagne",
             "src": "moet_champagne.PNG"
+        },
+        {
+            "id": 12,
+            "name": "search",
+            "src": "search.PNG"
+        },
+        {
+            "id": 13,
+            "name": "profile",
+            "src": "profile-icon.jpg"
+        },
+        {
+            "id": 14,
+            "name": "cart",
+            "src": "cart.PNG"
         }
     ]
 }

@@ -3,31 +3,19 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    /* Space between logo and nav items */
     align-items: center;
-    /* Center contents vertically */
     padding: 10px 20px;
-    /* Add some padding */
     background-color: #000000;
-    /* Rich green background */
+    /* Black background */
     height: 80px;
-    /* Set a taller height for a more substantial look */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Stronger shadow for depth */
 }
 
 .navbar-logo {
     max-width: 120px;
-    /* Adjust max width for better visibility */
+    /* Adjust logo size */
     height: auto;
     /* Maintain aspect ratio */
-    transition: transform 0.3s;
-    /* Smooth scaling effect */
-}
-
-.navbar-logo:hover {
-    transform: scale(1.05);
-    /* Slightly scale the logo on hover */
 }
 
 .nav-list {
@@ -43,17 +31,17 @@
 
 .nav-item {
     margin: 0 15px;
-    /* Add space between nav items */
+    /* Space between nav items */
     position: relative;
     /* For pseudo-element positioning */
     cursor: pointer;
-    /* Change cursor to pointer for interactivity */
+    /* Change cursor to pointer */
     color: #FFD700;
-    /* White text for contrast */
+    /* Text color */
     font-weight: bold;
-    /* Bold text for emphasis */
+    /* Bold text */
     text-transform: uppercase;
-    /* Uppercase for a modern feel */
+    /* Uppercase text */
     transition: color 0.3s;
     /* Smooth color transition */
 }
@@ -63,26 +51,81 @@
     /* Change color on hover */
 }
 
-.nav-item:before {
-    content: '';
-    /* Add a decorative line before each item */
-    position: absolute;
-    /* Position it absolutely */
-    left: 50%;
-    /* Center it horizontally */
-    bottom: -5px;
-    /* Position it below the item */
-    width: 0;
-    /* Initial width */
-    height: 2px;
-    /* Line height */
-    background-color: #f4a261;
-    /* Line color */
-    transition: width 0.3s ease;
-    /* Smooth width transition */
+/* Profile Icon */
+.profile {
+    position: relative;
+    /* Position relative to parent for dropdown */
 }
 
-.nav-item:hover:before {
-    width: 100%;
-    /* Expand width on hover */
+.profile-icon {
+    width: 40px;
+    /* Adjust profile icon size */
+    height: 40px;
+    /* Adjust profile icon size */
+    border-radius: 50%;
+    /* Make the image circular */
+    object-fit: cover;
+    /* Ensure the image covers the area */
+    margin-left: 20px;
+    /* Space between the profile icon and nav items */
+    cursor: pointer;
+    /* Change cursor to indicate it's clickable */
+    transition: transform 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+.profile-icon:hover {
+    transform: scale(1.1);
+    /* Slightly enlarge the icon on hover */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    /* Position dropdown menu absolutely */
+    top: 100%;
+    /* Position below the profile icon */
+    right: 0;
+    /* Align to the right */
+    background-color: #fff;
+    /* Dropdown background color */
+    border: 1px solid #ccc;
+    /* Border around the dropdown */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Shadow for dropdown */
+    border-radius: 4px;
+    /* Rounded corners */
+    z-index: 1000;
+    /* Ensure dropdown appears above other content */
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Stack items vertically */
+}
+
+/* Dropdown Item */
+.dropdown-item {
+    padding: 10px 20px;
+    /* Padding for each dropdown item */
+    color: #333;
+    /* Text color */
+    text-decoration: none;
+    /* Remove underline from links */
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+    /* Change background color on hover */
+}
+
+/* Cart Icon */
+.cart-icon {
+    width: 24px;
+    /* Adjust width for cart icon */
+    height: 24px;
+    /* Adjust height for cart icon */
+    margin-right: 8px;
+    /* Space between icon and text */
+    vertical-align: middle;
+    /* Align icon with text */
 }
