@@ -2,26 +2,87 @@
 
 .navbar {
     display: flex;
-    /* Use flexbox for layout */
-    justify-content: flex-end;
-    /* Align contents to the right */
+    justify-content: space-between;
+    /* Space between logo and nav items */
     align-items: center;
     /* Center contents vertically */
     padding: 10px 20px;
-    /* Add some padding (with more space on the sides) */
-    background-color: #f8f9fa;
-    /* Light background color */
-    height: 60px;
-    /* Set the height of the navbar */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
+    /* Add some padding */
+    background-color: #000000;
+    /* Rich green background */
+    height: 80px;
+    /* Set a taller height for a more substantial look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow for depth */
 }
 
 .navbar-logo {
-    max-width: 100px;
-    /* Limit the max width of the logo */
-    height: 95%;
+    max-width: 120px;
+    /* Adjust max width for better visibility */
+    height: auto;
     /* Maintain aspect ratio */
-    margin-right: auto;
-    /* Push the logo to the right */
+    transition: transform 0.3s;
+    /* Smooth scaling effect */
+}
+
+.navbar-logo:hover {
+    transform: scale(1.05);
+    /* Slightly scale the logo on hover */
+}
+
+.nav-list {
+    list-style-type: none;
+    /* Remove default list styles */
+    display: flex;
+    /* Use flexbox for horizontal layout */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+}
+
+.nav-item {
+    margin: 0 15px;
+    /* Add space between nav items */
+    position: relative;
+    /* For pseudo-element positioning */
+    cursor: pointer;
+    /* Change cursor to pointer for interactivity */
+    color: #FFD700;
+    /* White text for contrast */
+    font-weight: bold;
+    /* Bold text for emphasis */
+    text-transform: uppercase;
+    /* Uppercase for a modern feel */
+    transition: color 0.3s;
+    /* Smooth color transition */
+}
+
+.nav-item:hover {
+    color: #f4a261;
+    /* Change color on hover */
+}
+
+.nav-item:before {
+    content: '';
+    /* Add a decorative line before each item */
+    position: absolute;
+    /* Position it absolutely */
+    left: 50%;
+    /* Center it horizontally */
+    bottom: -5px;
+    /* Position it below the item */
+    width: 0;
+    /* Initial width */
+    height: 2px;
+    /* Line height */
+    background-color: #f4a261;
+    /* Line color */
+    transition: width 0.3s ease;
+    /* Smooth width transition */
+}
+
+.nav-item:hover:before {
+    width: 100%;
+    /* Expand width on hover */
 }

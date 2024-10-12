@@ -10,7 +10,7 @@ import Products from './Pages/Products';
 import Placeorder from './Pages/Placeorder';
 import HistoryOrder from './Pages/HistoryOrder';
 import NotFound from './Pages/NotFound';
-import Navigationbar from './Components/Navigationbar'
+import Navigationbar from './Components/Navigationbar';
 
 const App = () => {
   return (
@@ -26,8 +26,7 @@ const App = () => {
         <Route path='/drinks' element={<Products />} />
         <Route path='/order' element={<Placeorder />} />
         <Route path='/history' element={<HistoryOrder />} />
-        {/* Optional: Fallback Route */}
-        <Route path='*' element={<NotFound />} /> *
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
   );
