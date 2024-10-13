@@ -1,10 +1,10 @@
 import React from 'react';
-import Hero_image from '../Components/Hero';
+import Hero_image from '../Components/Hero_image';
 
 const Home = () => {
   return (
     <div>
-      <h1>Home Component</h1>
+      <Hero_image />
     </div>
   );
 };

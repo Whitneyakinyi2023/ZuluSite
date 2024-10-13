@@ -8,12 +8,12 @@
         {
             "id": 2,
             "name": "Amarula Cream",
-            "src": "./Amarula_cream.PNG"
+            "src": "Amarula_cream.PNG"
         },
         {
             "id": 3,
             "name": "Baileys Cream",
-            "src": "./baileys_cream.PNG"
+            "src": "baileys_cream.PNG"
         },
         {
             "id": 4,
