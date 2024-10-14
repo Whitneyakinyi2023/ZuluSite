@@ -1,0 +1,177 @@
+/* Set a full viewport height for the container and add a background image */
+body {
+    background-color: #000000;
+    /* Black background */
+    color: #ffcc00;
+    /* Gold text color */
+    font-family: Arial, sans-serif;
+    /* Set a global font family */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Ensure consistent box-sizing */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full height of the viewport */
+    background-image: url('../assets/Logo_name.PNG');
+    /* Add your background image path */
+    background-size: cover;
+    /* Cover the entire area */
+    background-position: center;
+    /* Center the image */
+    backdrop-filter: blur(5px);
+    /* Optional: adds a blur effect to the background */
+    padding: 20px;
+    /* Padding for smaller screens */
+    box-sizing: border-box;
+    /* Ensure padding is part of the element's total width/height */
+}
+
+/* Style for the sign-up form */
+.sign-up {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Semi-transparent black background */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Padding around the form */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    /* Shadow effect */
+    width: 100%;
+    /* Full width on small screens */
+    max-width: 400px;
+    /* Limit the max width */
+    text-align: center;
+    /* Centered text */
+    box-sizing: border-box;
+    /* Include padding in the width */
+}
+
+/* Style for horizontal line */
+.sign-style {
+    border: 1px solid #ffcc00;
+    /* Gold color for the line */
+    margin-bottom: 20px;
+    /* Space below the line */
+}
+
+/* Style for input fields */
+.name,
+.email,
+.password {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Padding inside the input */
+    margin: 10px 0;
+    /* Margin above and below */
+    border: 1px solid #ffcc00;
+    /* Gold border */
+    border-radius: 5px;
+    /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Light background for inputs */
+    color: #ffffff;
+    /* White text */
+    font-size: 1rem;
+    /* Responsive font size */
+    box-sizing: border-box;
+    /* Include padding in the width */
+}
+
+/* Style for submit button */
+.submit-button {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Padding inside the button */
+    margin-top: 10px;
+    /* Space above the button */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners */
+    background-color: #ff6600;
+    /* Orange background */
+    color: #ffffff;
+    /* White text */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 1.1rem;
+    /* Responsive font size */
+    transition: background-color 0.3s;
+    /* Smooth transition */
+}
+
+/* Button hover effect */
+.submit-button:hover {
+    background-color: #cc5200;
+    /* Darker orange on hover */
+}
+
+/* Style for the header */
+h2 {
+    color: #ffcc00;
+    /* Gold color */
+    margin: 0;
+    /* No margin */
+    font-size: 1.5rem;
+    /* Responsive font size */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .sign-up {
+        padding: 15px;
+        /* Reduce padding on smaller screens */
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        /* Smaller font size for smaller screens */
+    }
+
+    .name,
+    .email,
+    .password,
+    .submit-button {
+        padding: 10px;
+        /* Adjust padding for input fields and buttons */
+        font-size: 1rem;
+        /* Smaller font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 10px;
+        /* Smaller padding for very small screens */
+    }
+
+    .sign-up {
+        padding: 10px;
+        /* Reduce padding further */
+        max-width: 90%;
+        /* Make the form wider on very small screens */
+    }
+
+    h2 {
+        font-size: 1rem;
+        /* Adjust font size for very small screens */
+    }
+
+    .name,
+    .email,
+    .password,
+    .submit-button {
+        padding: 8px;
+        /* Further adjust padding */
+        font-size: 0.9rem;
+        /* Smaller font size */
+    }
+}
