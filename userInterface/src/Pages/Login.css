@@ -175,3 +175,30 @@ h2 {
         /* Smaller font size */
     }
 }
+
+/* Style for the Forgot Password text */
+.Forgot {
+    text-align: center;
+    /* Center the text */
+    margin-top: 15px;
+    /* Add some space above */
+}
+
+.reset-password {
+    color: #ffcc00;
+    /* Gold color */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    text-decoration: underline;
+    /* Underline the text */
+    font-size: 0.9rem;
+    /* Adjust font size */
+    transition: color 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the reset password text */
+.reset-password:hover {
+    color: #ff6600;
+    /* Change to orange on hover */
+}
