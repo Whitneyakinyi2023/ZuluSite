@@ -1,0 +1,1 @@
+This folder contains all the necessary mongoose modekls and schema used for designing the backend for the project   

@@ -1,0 +1,1 @@
+This folder manages all the logic for the backend
