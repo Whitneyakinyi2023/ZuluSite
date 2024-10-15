@@ -1,33 +1,40 @@
-// Importing necessary dependencies
-import cors from 'cors'; // Middleware to enable Cross-Origin Resource Sharing (CORS) for secure communication between different domains
-import connectMongo from './configuration/mongo.js'; // Importing the function to establish a MongoDB connection
-import 'dotenv/config'; // Load environment variables from a .env file (used for sensitive information like database credentials)
-import express from 'express'; // Import the Express framework to build the server
-import cloudinaryConnect from './configuration/cloudinary.js'
+import cors from 'cors'; // Enable Cross-Origin Resource Sharing
+import connectMongo from './configuration/mongo.js'; // MongoDB connection function
+import 'dotenv/config'; // Load environment variables
+import express from 'express'; // Express framework
+import cloudinaryConnect from './configuration/cloudinary.js'; // Cloudinary connection
+import routeUser from './routes/RouteUser.js'; // User routes
 
-// Initialize the Express application
-const app = express();
+const app = express(); // Initialize Express app
+const port = process.env.PORT || 3000; // Set port
 
-// Set the server's port, either from environment variables (process.env.PORT) or default to port 3000
-const port = process.env.PORT || 3000;
+// Function to start the server
+const startServer = async () => {
+    try {
+        // Connect to MongoDB and Cloudinary
+        await connectMongo();
+        await cloudinaryConnect();
 
-// Establish a connection to MongoDB using the imported connectMongo function
-connectMongo();
-cloudinaryConnect();
-// Middleware to parse incoming JSON payloads in the request body
-app.use(express.json());
+        // Middleware to parse incoming JSON and enable CORS
+        app.use(express.json());
+        app.use(cors());
 
-// Enable CORS middleware to allow cross-origin requests from other domains
-app.use(cors());
+        // API routes
+        app.use('/api/user', routeUser);
 
-// Define a basic route for the root URL ("/")
-// This route sends a simple message when someone visits the root path
-app.get('/', (req, res) => {
-    res.send("Server is up"); // Respond with a message to indicate the server is running
-});
+        // Basic root route
+        app.get('/', (req, res) => {
+            res.send("Server is up");
+        });
 
-// Start the Express server and listen on the specified port
-// Log a message to the console indicating that the server is running and listening on the port
-app.listen(port, () => {
-    console.log('We are running on this port: ' + port); // Output the port number for confirmation
-});
+        // Start the Express server
+        app.listen(port, () => {
+            console.log(`Server running on port: ${port}`);
+        });
+    } catch (error) {
+        console.error('Error during server startup:', error);
+        process.exit(1); // Exit if there's a startup failure
+    }
+};
+
+startServer(); // Call function to start the server
