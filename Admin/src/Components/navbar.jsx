@@ -25,7 +25,7 @@ const Navbar = () => {
                 <NavLink to='/Stats' className='nav-item'><p>Statistics</p></NavLink>
             </ul>
             {/* Logout button */}
-            <button className="logout-button">Logout</button>
+            <button onClick={() => setToken('')} className="logout-button">Logout</button>
         </div>
     );
 };

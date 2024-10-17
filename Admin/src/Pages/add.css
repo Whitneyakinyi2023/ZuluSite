@@ -1,0 +1,65 @@
+.add-drink-form {
+    padding: 20px;
+    background-color: #1a1a1a;
+    /* Black background */
+    border-radius: 10px;
+    color: white;
+    /* Text color */
+}
+
+.upload-container {
+    margin: 20px 0;
+}
+
+.image-upload-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Three columns */
+    gap: 15px;
+    /* Space between images */
+}
+
+.image-upload-label {
+    cursor: pointer;
+    /* Pointer on hover */
+    border: 1px dashed gold;
+    /* Gold border for uploads */
+    border-radius: 10px;
+    overflow: hidden;
+    /* Prevent overflow of image */
+    transition: background-color 0.3s;
+    /* Smooth background transition */
+}
+
+.image-upload-label:hover {
+    background-color: rgba(255, 215, 0, 0.1);
+    /* Light gold on hover */
+}
+
+.upload-image {
+    width: 100%;
+    /* Responsive width */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.submit-button {
+    background-color: gold;
+    /* Gold button */
+    color: black;
+    /* Black text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Pointer on hover */
+    margin-top: 20px;
+    /* Space above button */
+    transition: background-color 0.3s;
+    /* Smooth background transition */
+}
+
+.submit-button:hover {
+    background-color: #ffd700;
+    /* Darker gold on hover */
+}

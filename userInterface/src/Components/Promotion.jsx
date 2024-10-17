@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import productsData from '../assets/products.json'; // Import the JSON data
-
+import productsData from '../assets/products.json';
+import imagesData from '../assets/images.json'; // Import your images JSON
+import 'pro'
 const Promotion = () => {
     const [promotedProducts, setPromotedProducts] = useState([]);
 
@@ -16,6 +17,12 @@ const Promotion = () => {
         setPromotedProducts(getRandomProducts());
     }, []);
 
+    // Function to find the image by product ID
+    const findImageByProductId = (id) => {
+        const image = imagesData.images.find(img => img.id === id);
+        return image ? new URL(`../assets/${image.src}`, import.meta.url).href : null;
+    };
+
     return (
         <div className="promotion-section">
             <h2>Featured Promotions</h2>
@@ -23,6 +30,11 @@ const Promotion = () => {
                 {promotedProducts.map(product => (
                     <div key={product.id} className="promotion-product">
                         <h3>{product.name}</h3>
+                        <img
+                            src={findImageByProductId(product.id)}
+                            alt={product.name}
+                            className="promotion-image"
+                        />
                         <p>{product.description}</p>
                         <p>Price: Ksh {product.price}</p>
                         <p>Size: {product.size}</p>

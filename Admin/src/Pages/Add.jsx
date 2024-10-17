@@ -1,64 +1,57 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import imagesData from '../assets/image.json';
+import './add.css'
+
+// Find the default image for upload from the JSON data
+const uploadImage = imagesData.images.find(image => image.id === 2);
 
 const AddDrink = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        category: '',
-        size: '',
-        description: '',
-        price: '',
-        image: null
-    });
-    const [message, setMessage] = useState('');
+    // State to hold the preview URLs of uploaded images
+    const [imagePreviews, setImagePreviews] = useState([uploadImage.src, '', '', '', '']);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-            ...prevState,
-            [name]: value
-        }));
-    };
-
-    const handleImageChange = (e) => {
-        setFormData(prevState => ({
-            ...prevState,
-            image: e.target.files[0]
-        }));
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const data = new FormData();
-            data.append('name', formData.name);
-            data.append('category', formData.category);
-            data.append('size', formData.size);
-            data.append('description', formData.description);
-            data.append('price', formData.price);
-            data.append('image', formData.image);
-
-            const res = await axios.post('/api/drinks/add', data);
-            setMessage(res.data.message); // Success message from the server
-        } catch (error) {
-            setMessage('Error adding drink');
+    // Function to handle file selection and update image previews
+    const handleImageUpload = (index) => (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                const updatedPreviews = [...imagePreviews];
+                updatedPreviews[index] = reader.result; // Set the new preview URL
+                setImagePreviews(updatedPreviews);
+            };
+            reader.readAsDataURL(file); // Read the file as a data URL
         }
     };
 
     return (
-        <div>
-            <h1>Add a New Drink</h1>
-            <form onSubmit={handleSubmit}>
-                <input type="text" name="name" placeholder="Drink Name" onChange={handleChange} required />
-                <input type="text" name="category" placeholder="Category" onChange={handleChange} required />
-                <input type="text" name="size" placeholder="Size" onChange={handleChange} required />
-                <input type="text" name="description" placeholder="Description" onChange={handleChange} />
-                <input type="number" name="price" placeholder="Price" onChange={handleChange} required />
-                <input type="file" name="image" onChange={handleImageChange} required />
-                <button type="submit">Add Drink</button>
-            </form>
-            {message && <p>{message}</p>}
-        </div>
+        <form className="add-drink-form">
+            <h2>Add a New Drink</h2>
+            <div className="upload-container">
+                <p>Upload Images:</p>
+                <div className="image-upload-grid">
+                    {/* Loop through the image previews to create upload inputs */}
+                    {imagePreviews.map((src, index) => (
+                        <label key={index} htmlFor={`image${index + 1}`} className="image-upload-label">
+                            {/* Show image preview if available, otherwise show default upload image */}
+                            <img
+                                src={src ? src : new URL(`../assets/${uploadImage.src}`, import.meta.url).href}
+                                alt={`Drink Preview ${index + 1}`}
+                                className="upload-image"
+                            />
+                            <input
+                                type="file"
+                                id={`image${index + 1}`}
+                                hidden
+                                accept="image/*"
+                                onChange={handleImageUpload(index)} // Update preview on file selection
+                            />
+                        </label>
+                    ))}
+                </div>
+            </div>
+            {/* Submit button (to be implemented with actual logic) */}
+            <button type="submit" className="submit-button">Add Drink</button>
+        </form>
     );
 };
 

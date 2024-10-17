@@ -1,30 +1,54 @@
 .promotion-section {
-    padding: 20px;
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    margin: 20px 0;
+    padding: 30px;
+    background-color: #1a1a1a;
+    /* Black background for your theme */
+    border-radius: 10px;
+    margin: 30px 0;
+    color: #fff;
+    /* White text for readability */
 }
 
 .promotion-products {
     display: flex;
     gap: 20px;
-    /* Space between product cards */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Ensures responsiveness on smaller screens */
 }
 
 .promotion-product {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background: #333;
+    /* Darker background to fit your theme */
+    border: 1px solid #ffd700;
+    /* Gold border */
+    border-radius: 10px;
     padding: 15px;
-    width: 30%;
-    /* Adjust as needed for responsiveness */
+    width: calc(30% - 20px);
+    /* Adjusted width for responsiveness */
+    position: relative;
 }
 
-.promotion-product h3 {
+.product-image {
+    width: 100%;
+    max-width: 100px;
+    /* Adjust as needed for smaller or larger images */
+    display: block;
+    margin: 0 auto 10px;
+    /* Center image and provide space */
+    border-radius: 8px;
+}
+
+.product-details {
+    padding: 0 10px;
+    /* Padding around the details */
+}
+
+.product-details h3 {
     font-size: 1.2em;
-    margin: 0 0 10px 0;
+    margin: 0;
 }
 
-.promotion-product p {
+.product-details p {
     margin: 5px 0;
+    font-size: 0.9em;
 }
