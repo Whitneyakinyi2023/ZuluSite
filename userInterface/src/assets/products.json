@@ -5,6 +5,7 @@
             "name": "4th Street Red",
             "description": "A sweet and fruity red wine, perfect for casual gatherings.",
             "price": 2500,
+            "src": "4thstreet_red.PNG",
             "size": "750ml"
         },
         {
@@ -12,6 +13,7 @@
             "name": "Amarula Cream",
             "description": "A creamy liqueur made from African marula fruit, with hints of caramel.",
             "price": 3000,
+            "src": "Amarula_cream.PNG",
             "size": "750ml"
         },
         {
@@ -19,6 +21,7 @@
             "name": "Baileys Cream",
             "description": "A popular Irish cream liqueur, perfect for mixing or drinking neat.",
             "price": 4000,
+            "src": "baileys_cream.PNG",
             "size": "750ml"
         },
         {
@@ -26,6 +29,7 @@
             "name": "Four Cousins Wine",
             "description": "A sweet, fruity wine with a gentle flavor, ideal for celebrations.",
             "price": 2000,
+            "src": "four_cousins_wine.PNG",
             "size": "750ml"
         },
         {
@@ -33,6 +37,7 @@
             "name": "Jack Daniel's Tennessee Whiskey",
             "description": "A classic American whiskey, known for its smooth and bold flavor.",
             "price": 7500,
+            "src": "Jack_Daniels_Tennessee_whiskey.PNG",
             "size": "1L"
         },
         {
@@ -40,6 +45,7 @@
             "name": "Jameson Whiskey",
             "description": "A smooth Irish whiskey, triple distilled for a rich flavor.",
             "price": 6500,
+            "src": "Jameson_whisky.PNG",
             "size": "750ml"
         },
         {
@@ -47,6 +53,7 @@
             "name": "Kenyan Originals Pineapple Mint",
             "description": "A refreshing cider with a blend of pineapple and mint flavors.",
             "price": 600,
+            "src": "Kenyan_Originals_PineappleMint.PNG",
             "size": "500ml"
         },
         {
@@ -54,6 +61,7 @@
             "name": "Kenya Cane Spirit",
             "description": "A popular spirit made from sugarcane, smooth with a mild flavor.",
             "price": 1200,
+            "src": "kenyacane_Spirit.PNG",
             "size": "750ml"
         },
         {
@@ -61,6 +69,7 @@
             "name": "Moet Champagne",
             "description": "A luxurious French champagne, perfect for toasting special occasions.",
             "price": 8500,
+            "src": "moet_champagne.PNG",
             "size": "750ml"
         }
     ]
