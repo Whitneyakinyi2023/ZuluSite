@@ -11,15 +11,27 @@ const Login = ({ setToken }) => {
 
     const onSubmitHandler = async (e) => {
         e.preventDefault();
+
+        // Basic validation
+        if (!email || !password) {
+            return toast.error('Please fill in all fields');
+        }
+
         try {
-            const response = await axios.post(backendUrl + '/api/user/admin', { email, password });
+            const response = await axios.post(`${backendUrl}/api/user/admin`, { email, password });
+
             if (response.data.success) {
+                // Store token in localStorage or sessionStorage
+                localStorage.setItem('token', response.data.token);
                 setToken(response.data.token);
+                toast.success('Login successful! Redirecting...');
+                // Add redirection to admin dashboard, if needed
             } else {
                 toast.error(response.data.message);
             }
         } catch (error) {
             console.error(error);
+            toast.error('Login failed. Please try again.');
         }
     };
 
