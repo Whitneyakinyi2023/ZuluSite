@@ -1,0 +1,38 @@
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    /* Black background */
+    color: gold;
+    /* Gold text for elements */
+}
+
+/* Logo image styling */
+.logo-image {
+    height: 50px;
+    width: auto;
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.6);
+    /* Golden shadow */
+}
+
+/* Logout button styling */
+.logout-button {
+    background-color: gold;
+    /* Gold background for the button */
+    color: black;
+    /* Black text on the button */
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #FFD700;
+    /* Lighter gold on hover */
+}
