@@ -26,12 +26,19 @@
     align-items: center;
     /* Center the content horizontally */
     text-align: center;
+    font-size: larger;
+    line-height: 80%;
     color: #FFD700;
     /* Gold color for text */
     font-size: 48px;
     font-weight: bold;
     line-height: 1.2;
     margin-right: 20px;
+}
+
+.indulge {
+    line-height: normal;
+    font-weight: 300;
 }
 
 /* Tagline aligned to the center below the introduction */

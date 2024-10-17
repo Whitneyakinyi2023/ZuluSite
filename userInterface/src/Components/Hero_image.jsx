@@ -9,7 +9,7 @@ const Hero_image = () => {
         <div className='hero'>
             {/* Left section of the hero section */}
             <div className='introduction'>
-                <p>Indulge with Us</p>
+                <h2 className='indulge'>Indulge with Us</h2>
                 <br />
             </div>
             {/* <div className='tag-line'>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import productsData from '../assets/products.json';
 import imagesData from '../assets/images.json'; // Import your images JSON
-import 'pro'
+import './promotion.css'
 const Promotion = () => {
     const [promotedProducts, setPromotedProducts] = useState([]);
 

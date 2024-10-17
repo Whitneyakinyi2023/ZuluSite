@@ -11,11 +11,13 @@ import Placeorder from './Pages/Placeorder';
 import HistoryOrder from './Pages/HistoryOrder';
 import NotFound from './Pages/NotFound';
 import Navigationbar from './Components/Navigationbar';
+import Search from './Components/Search';
 
 const App = () => {
   return (
     <div className='screen-compatible'>
       <Navigationbar />
+      <Search />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/profile' element={<Profile />} />

@@ -1,0 +1,66 @@
+/* search.css */
+.search-container {
+    display: flex;
+    /* Use flexbox for layout */
+    flex-direction: column;
+    /* Stack elements vertically */
+    align-items: flex-end;
+    /* Align items to the right */
+    background-color: #000;
+    /* Black background */
+    padding: 15px;
+    /* Add padding */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+}
+
+.search-bar {
+    display: flex;
+    /* Use flexbox for input and icon */
+    align-items: center;
+    /* Center align vertically */
+    width: 100%;
+    /* Full width */
+}
+
+.search-input {
+    flex: 1;
+    /* Allow input to take available space */
+    padding: 10px;
+    /* Add padding inside input */
+    border: 2px solid gold;
+    /* Gold border */
+    border-radius: 5px;
+    /* Slightly rounded corners */
+    background-color: #f8f8f8;
+    /* Light background for input */
+    color: #000;
+    /* Black text */
+    font-size: 16px;
+    /* Font size */
+}
+
+.search-input::placeholder {
+    color: #aaa;
+    /* Placeholder color */
+}
+
+.search-icon {
+    margin-left: 10px;
+    /* Space between input and icon */
+    cursor: pointer;
+    /* Show pointer on hover */
+}
+
+.close-icon {
+    margin-top: 10px;
+    /* Space between bar and close icon */
+    cursor: pointer;
+    /* Show pointer on hover */
+    width: 24px;
+    /* Size of close icon */
+    height: 24px;
+    /* Size of close icon */
+}
