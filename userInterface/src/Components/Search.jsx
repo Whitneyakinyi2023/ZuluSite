@@ -20,14 +20,14 @@ const Search = () => {
                 />
                 <img
                     src={new URL(`../assets/${searchImage.src}`, import.meta.url).href}
-                    alt={searchImage.name} // Corrected
+                    alt={searchImage.name}
                     className="search-icon"
                 />
             </div>
             <img
                 onClick={() => setShowSearch(false)}
                 src={new URL(`../assets/${crossImage.src}`, import.meta.url).href}
-                alt={crossImage.name} // Corrected
+                alt={crossImage.name}
                 className="cross-icon"
             />
         </div>

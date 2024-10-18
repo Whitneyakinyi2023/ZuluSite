@@ -31,13 +31,12 @@ const ZulugoodsSchema = new mongoose.Schema({
         default: false // Default value is false
     },
     date: {
-        type: Number, // Timestamp or date for when the product was added
-        required: true // Date is required
+        type: Date, // Timestamp or date for when the product was added
+        default: Date.now // Set to current date by default
     }
 });
 
 // Create a Mongoose model for the product, using ZulugoodsSchema
 const GoodsModel = mongoose.models.Product || mongoose.model("Product", ZulugoodsSchema);
 
-// Export the model for use in other parts of the application
 export default GoodsModel;

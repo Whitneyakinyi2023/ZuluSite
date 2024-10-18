@@ -28,7 +28,7 @@ const Navigationbar = () => {
                 <NavLink to='/' className='nav-item'><p>Home</p></NavLink>
                 <NavLink to='/about' className='nav-item'><p>About Zulu</p></NavLink>
                 <NavLink to='/drinks' className='nav-item'><p>Products</p></NavLink>
-                <NavLink to='/order' className='nav-item'><p>Order</p></NavLink>
+                <NavLink to='/ShoppingCart' className='nav-item'><p>Order</p></NavLink>
             </ul>
             <div className='profile' onClick={toggleDropdown}>
                 {/* Render the profile image */}

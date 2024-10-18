@@ -4,6 +4,7 @@ import 'dotenv/config'; // Load environment variables
 import express from 'express'; // Express framework
 import cloudinaryConnect from './configuration/cloudinary.js'; // Cloudinary connection
 import routeUser from './routes/RouteUser.js'; // User routes
+import productRouter from './routes/productRoute.js';
 
 const app = express(); // Initialize Express app
 const port = process.env.PORT || 3000; // Set port
@@ -21,7 +22,7 @@ const startServer = async () => {
 
         // API routes
         app.use('/api/user', routeUser);
-
+        app.use('/api/product', productRouter)
         // Basic root route
         app.get('/', (req, res) => {
             res.send("Server is up");

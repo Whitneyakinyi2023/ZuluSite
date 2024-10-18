@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom'; // Import useHistory hook for navigation
 import './Login.css';
 
 const Login = () => {
+  const history = useHistory(); // Initialize useHistory hook
+
   // useState hook to manage the current state of the form (either Log In or Sign Up)
   const [currentState, setCurrentState] = useState('LogIn');
 
@@ -9,8 +12,14 @@ const Login = () => {
   const onSubmitHandler = async (event) => {
     event.preventDefault(); // Correctly prevent the default form submission behavior
 
-    // You can add your login or sign-up logic here
-    console.log("Form submitted with state:", currentState);
+    // Replace with your actual login or sign-up logic
+    // For demo purposes, assume login is successful
+    const loginSuccessful = true;
+
+    if (loginSuccessful) {
+      // Navigate to orders page upon successful login
+      history.push('/ShoppingCart');
+    }
   };
 
   return (

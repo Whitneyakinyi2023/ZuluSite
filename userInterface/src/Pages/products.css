@@ -50,7 +50,7 @@ body {
     /* Fixed height */
     object-fit: cover;
     /* Maintain aspect ratio */
-    border-bottom: 2px solid #gold;
+    border-bottom: 2px solid gold;
     /* Gold bottom border */
 }
 
