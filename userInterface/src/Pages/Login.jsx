@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom'; // Import useHistory hook for navigation
 import './Login.css';
 
 const Login = () => {
-  const history = useHistory(); // Initialize useHistory hook
-
   // useState hook to manage the current state of the form (either Log In or Sign Up)
   const [currentState, setCurrentState] = useState('LogIn');
 
@@ -17,8 +14,8 @@ const Login = () => {
     const loginSuccessful = true;
 
     if (loginSuccessful) {
-      // Navigate to orders page upon successful login
-      history.push('/ShoppingCart');
+      // Navigation logic removed as per your request
+      console.log('Login successful. Navigation code removed.');
     }
   };
 
