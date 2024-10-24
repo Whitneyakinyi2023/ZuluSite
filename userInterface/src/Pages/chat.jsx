@@ -13,14 +13,14 @@ const Chat = () => {
 
             setTimeout(() => {
                 const botResponse = generateResponse(input);
-                setMessages([...newMessages, { sender: "Bot", text: botResponse }]);
+                setMessages([...newMessages, { sender: "ShakaZulu", text: botResponse }]);
             }, 500);
         }
     };
 
     const generateResponse = (message) => {
         let response = "I'm not sure what you mean.";
-        if (message.toLowerCase().includes("hello")) {
+        if (message.toLowerCase().includes("hello", "hey", "mam")) {
             response = "Hello! How can I assist you?";
         } else if (message.toLowerCase().includes("menu")) {
             response = "You can check out our drinks menu!";
